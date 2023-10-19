@@ -3,8 +3,8 @@ from streamlit_webrtc import webrtc_streamer
 import av
 from yolo_predictions import YOLO_Pred
 
-yolo = YOLO_Pred('./best.onnx',
-                 './data.yaml')
+yolo = YOLO_Pred('3_webapp/best.onnx',
+                 '3_webapp/data.yaml')
 
 def video_frame_callback(frame):
     img = frame.to_ndarray(format="bgr24")
